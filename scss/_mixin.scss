@@ -4,11 +4,6 @@
   font-weight: $font-weight;
   font-style: $font-style;
 }
-@mixin desk {
-  @media (max-width: $desktop-width) {
-    @content;
-  }
-}
 
 @mixin tablet {
   @media (max-width: $tablet-width) {
