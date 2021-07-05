@@ -1,0 +1,12 @@
+main {
+  padding: 24px 0;
+
+  @include tablet{
+  padding:24px;  
+  }
+  
+  h1{
+    @include font(24,24,bold);
+  }
+  
+}

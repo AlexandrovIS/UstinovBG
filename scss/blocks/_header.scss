@@ -67,6 +67,7 @@
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
+      
     }
 
     &-active {
@@ -167,4 +168,8 @@
 
 .header-bottom-border {
   box-shadow: 0px 1px 0px 0px $header_grey_line;
+}
+
+a:active, a:visited {
+ color: inherit;
 }
