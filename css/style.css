@@ -238,8 +238,8 @@ table {
     top: -200px;
     bottom: auto;
     left: 0;
-    -webkit-transition: top 700ms ease-in, opacity 300ms linear, background-color 300ms ease-out;
-    transition: top 700ms ease-in, opacity 300ms linear, background-color 300ms ease-out;
+    -webkit-transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
+    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
   }
 }
 
@@ -320,11 +320,9 @@ table {
 
 @media (max-width: 768px) {
   .nav_active {
-    top: 120px;
+    top: 121px;
     opacity: 1;
     visibility: visible;
-    -webkit-transition: top 250ms ease-out, opacity 900ms ease-out;
-    transition: top 250ms ease-out, opacity 900ms ease-out;
   }
 }
 

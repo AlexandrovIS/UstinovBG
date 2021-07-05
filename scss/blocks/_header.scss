@@ -39,8 +39,7 @@
     bottom: auto;
     left: 0;
     //up
-    transition: top 700ms ease-in, opacity 300ms linear, background-color 300ms ease-out;
-  
+    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
   }
 
   &-list {
@@ -60,7 +59,6 @@
     justify-content: center;
     align-items: center;
     padding-top: 25px;
-    // border: 1px solid #000;
     transition: box-shadow 0.5s ease;
 
     a {
@@ -92,11 +90,11 @@
 
 .nav_active {
   @include mobile {
-    top: 120px;
+    top: 121px;
     opacity: 1;
     visibility: visible;
     //down
-    transition: top 250ms ease-out, opacity 900ms ease-out;
+    // transition: top 350ms ease-out, opacity 250ms ease-out, background-color 250ms ease-out;
   }
 }
 
