@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Scada";
+  src: url(../cdn/fonts/Scada_regular_bold.woff) format("woff");
+  src: url(../cdn/fonts/Scada_regular_bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scada";
+  src: url(../cdn/fonts/Scada_regular.woff) format("woff");
+  src: url(../cdn/fonts/Scada_regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scada";
+  src: url(../cdn/fonts/Scada_italic_bold.woff) format("woff");
+  src: url(../cdn/fonts/Scada_italic_bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Scada";
+  src: url(../cdn/fonts/Scada_italic.woff) format("woff");
+  src: url(../cdn/fonts/Scada_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MinionPro";
+  src: url(../cdn/fonts/MinionPro-Regular.otf) format("otf"),
+    url(../cdn/fonts/MinionPro-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
