@@ -1,0 +1,32 @@
+.architecture{
+  .arch__block{
+    display: flex;
+    flex-direction: column;
+    &-title{
+      align-self: flex-end;
+      justify-self: flex-end;
+      @include font(16,20)
+    }
+
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px;
+      box-shadow: 0px -1px 0px 0px $arch_section_line;
+    }
+
+    &-item{
+      display: flex;
+      flex-direction: column;
+
+      .item-title{
+        margin-top: 10px;
+        @include font(16,20,bold);
+      }
+      .item-desc{
+        @include font(14,14)
+      }
+    }
+  }
+}
