@@ -573,8 +573,8 @@ a:active, a:visited {
 }
 
 .arch__project-btn-disable {
-  -webkit-transform: scaleY(0.7);
-          transform: scaleY(0.7);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   opacity: 0;
 }
 
@@ -601,9 +601,7 @@ a:active, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 360px;
-  height: 360px;
-  overflow: hidden;
+  width: 100%;
 }
 
 .arch__photo-gallery img {
@@ -611,9 +609,8 @@ a:active, a:visited {
   margin: auto;
   position: absolute;
   top: 0;
-  bottom: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
   -webkit-transition: -webkit-transform 700ms ease-in-out;
   transition: -webkit-transform 700ms ease-in-out;
   transition: transform 700ms ease-in-out;

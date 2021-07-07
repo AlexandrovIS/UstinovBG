@@ -94,7 +94,7 @@
     transition: transform 700ms ease, opacity 350ms ease-in;
     transition: background-color 300ms ease-in-out, color 500ms ease-in-out ;
     &-disable{
-      transform: scaleY(0.7);
+      transform: scaleY(0);
       opacity: 0;
     }
   }
@@ -114,8 +114,8 @@
     position: relative;
     display: flex;
     width: $arch_slider_size;
-    height: $arch_slider_size;
-    overflow: hidden;
+    // height: $arch_slider_size;
+    // overflow: hidden;
   }
 
   img{
@@ -123,8 +123,9 @@
     margin: auto;
     position: absolute;
     top: 0;
-    bottom: 0;
-    transform: translateX(-100%);
+    // bottom: 0;
+    // transform: translateX(-100%);
+    transform: translateX(-200%);
     transition: transform 700ms ease-in-out;
   }
 
