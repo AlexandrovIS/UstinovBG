@@ -475,6 +475,9 @@ a:active, a:visited {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 10px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -578,5 +581,47 @@ a:active, a:visited {
 .arch__project-btn:hover {
   background-color: white;
   color: black;
+}
+
+.arch__photo-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arch__photo-gallery .photo-gallery-list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 360px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.arch__photo-gallery img {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 700ms ease-in-out;
+  transition: -webkit-transform 700ms ease-in-out;
+  transition: transform 700ms ease-in-out;
+  transition: transform 700ms ease-in-out, -webkit-transform 700ms ease-in-out;
+}
+
+.arch__photo-gallery .active_img {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 /*# sourceMappingURL=style.css.map */

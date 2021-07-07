@@ -19,6 +19,8 @@
       @include mobile{
        flex-direction: column;   
        align-items: center;
+       padding-top: 10px;
+       box-shadow: none;
       }
     }
 
@@ -101,5 +103,32 @@
       background-color: $arch_btn_color;
       color:  $arch_btn_bg;
     }
-  
+}
+
+.arch__photo-gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .photo-gallery-list{
+    position: relative;
+    display: flex;
+    width: $arch_slider_size;
+    height: $arch_slider_size;
+    overflow: hidden;
+  }
+
+  img{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 700ms ease-in-out;
+  }
+
+  .active_img{
+    transform: translateX(0%);
+  }
 }
