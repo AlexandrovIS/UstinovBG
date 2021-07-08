@@ -27,9 +27,9 @@
 
 .nav {
   min-width: 50%;
-  
 
   @include mobile {
+    z-index: 1;
     width: 100%;
     visibility: visible;
     opacity: 0;
@@ -39,7 +39,8 @@
     bottom: auto;
     left: 0;
     //up
-    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
+    transition: top 700ms ease-in, opacity 450ms linear,
+      background-color 300ms ease-out;
   }
 
   &-list {
@@ -65,7 +66,6 @@
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
-      
     }
 
     &-active {
@@ -91,6 +91,7 @@
 .nav_active {
   @include mobile {
     top: 121px;
+    bottom: 0;
     opacity: 1;
     visibility: visible;
     //down
@@ -102,6 +103,7 @@
   display: none;
 
   @include mobile {
+    z-index: 2;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -115,7 +117,7 @@
       width: $cross_menu_size;
       height: $cross_menu_thickness;
       background: $cross_menu_color;
-      border-radius: 0.5px;
+      border-radius: 5px;
       transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
@@ -160,7 +162,7 @@
 
   @include mobile {
     @include font(16, 16);
-    padding: 16px;
+    padding-top: 16px;
   }
 }
 
@@ -168,6 +170,7 @@
   box-shadow: 0px 1px 0px 0px $header_grey_line;
 }
 
-a:active, a:visited {
- color: inherit;
+a:active,
+a:visited {
+  color: inherit;
 }

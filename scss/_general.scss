@@ -17,18 +17,18 @@
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0 0 0 0)
+  clip: rect(0 0 0 0);
 }
-
 
 .main {
   padding: 24px 0;
 
-  @include tablet{
-   padding:24px;  
+  @include tablet {
+    padding: 24px;
   }
-  
-  .main-title{
-    @include font(24,24,bold);
+
+  .main-title {
+    @include font(18, 18, bold);
+    text-transform: uppercase;
   }
 }

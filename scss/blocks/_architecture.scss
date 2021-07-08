@@ -1,0 +1,225 @@
+.architecture {
+  .arch__block {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      align-self: flex-end;
+      justify-self: flex-end;
+      @include font(16, 20);
+
+      @include mobile {
+        margin-top: -20px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px;
+      box-shadow: 0px -1px 0px 0px $arch_section_line;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        box-shadow: none;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+
+      .item-img {
+        overflow: hidden;
+        width: $img_size_desctop;
+        height: $img_size_desctop;
+
+        @include mobile {
+          width: $img_size_mob;
+          height: $img_size_mob;
+          margin-right: -24px;
+          margin-left: -24px;
+        }
+      }
+
+      .item-img:hover img {
+        transform: scale($img_scale_zoom);
+      }
+
+      img {
+        height: 100%;
+        transition: transform $img_scale_time ease-out;
+      }
+
+      .item-title {
+        margin-top: 10px;
+        @include font(16, 20, bold);
+        text-transform: uppercase;
+      }
+      .item-desc {
+        @include font(14, 14);
+      }
+    }
+  }
+}
+
+.arch__project {
+  &-title {
+    @include font(16, 20, bold);
+  }
+
+  &-article {
+    margin-top: 24px;
+    max-width: 640px;
+    @include font(16, 16);
+    max-height: $visible_column;
+    overflow: hidden;
+    text-align: justify;
+    transition: max-height $arch_height_time ease;
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    &-active {
+      max-height: $arch_content_height;
+    }
+  }
+
+  &-btn {
+    margin-top: 10px;
+    padding: 3px;
+    background-color: $arch_btn_bg;
+    color: $arch_btn_color;
+    transition: transform 700ms ease, opacity 350ms ease-in;
+    transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
+    &-disable {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+  }
+
+  &-btn:hover {
+    background-color: $arch_btn_color;
+    color: $arch_btn_bg;
+  }
+}
+
+.arch__photo-gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .photo-gallery-list {
+    position: relative;
+    display: flex;
+    width: $arch_slider_size;
+    height: $arch_slider_size;
+    overflow: hidden;
+
+    @include mobile {
+      width: $arch_slider_size-mob;
+      height: $arch_slider_size-mob;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+
+    @include mobile {
+      width: 85%;
+      transform: translateX(102%);
+      opacity: 0;
+    }
+  }
+
+  .active_img {
+    transform: translateX(0%);
+
+    @include mobile {
+      opacity: 1;
+    }
+  }
+
+  .arch__photo-gallery-alt {
+    @include font(16, 16);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .prev__img-range,
+  .next__img-range {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    bottom: 0;
+
+    @include mobile {
+      width: 15%;
+    }
+  }
+
+  .prev__img-range {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .next__img-range {
+    right: 0;
+  }
+
+  .prev__img-btn,
+  .next__img-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    width: 24px;
+    height: 18px;
+
+    span {
+      width: 100%;
+      height: $arch_slider_arrow_thickness;
+      background-color: $arch_slider_arrow_color;
+      border-radius: 5px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .prev__img-btn {
+    left: 0;
+
+    :first-child {
+      transform: rotate(-45deg);
+    }
+    :last-child {
+      transform: rotate(45deg);
+    }
+  }
+
+  .next__img-btn {
+    right: 0;
+
+    :first-child {
+      transform: rotate(45deg);
+    }
+    :last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
