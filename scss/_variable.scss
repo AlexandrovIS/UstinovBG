@@ -10,14 +10,17 @@ $cross_menu_size: 32px;
 $cross_menu_thickness: 2px;
 $menu_background: rgba(255, 255, 255, 1);
 
-//architecture стр Архитектура
-//полоса
-$arch_section_line: rgba(0, 0, 0, 0.3);
-
+//------------!!! Architecture Page---------- //
+$arch_section_line: rgba(0, 0, 0, 0.3); //полоса
 //время и зум картинок
 $img_scale_time: 700ms;
 $img_scale_zoom: 1.3;
 
+//размеры иконок картинок
+$img_size_desctop: 240px;
+$img_size_mob: 375px;
+
+//------------!!! Project Page---------- //
 //Страница с проектом
 $arch_content_height: 5000px; //max height text content
 $arch_height_time: 2500ms; //время разворота
@@ -27,5 +30,8 @@ $arch_btn_bg: rgba(0, 0, 0, 1);
 $visible_column: 6 * (16px);
 
 //Слайдер
-$arch_slider_size: 720px;
-// $arch_slider_size: 100%;
+$arch_slider_size: 672px;
+$arch_slider_size-mob: 375px;
+$arch_slider_arrow_color: rgba(0, 0, 0, 1);
+
+$arch_slider_arrow_thickness: 2px; //толщина стрелок

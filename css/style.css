@@ -249,6 +249,7 @@ table {
 
 @media (max-width: 768px) {
   .nav {
+    z-index: 1;
     width: 100%;
     visibility: visible;
     opacity: 0;
@@ -340,6 +341,7 @@ table {
 @media (max-width: 768px) {
   .nav_active {
     top: 121px;
+    bottom: 0;
     opacity: 1;
     visibility: visible;
   }
@@ -351,6 +353,7 @@ table {
 
 @media (max-width: 768px) {
   .nav_icon {
+    z-index: 2;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -364,7 +367,7 @@ table {
     width: 32px;
     height: 2px;
     background: black;
-    border-radius: 0.5px;
+    border-radius: 5px;
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
@@ -420,7 +423,7 @@ table {
     line-height: 16px;
     font-weight: 400;
     font-style: normal;
-    padding: 16px;
+    padding-top: 16px;
   }
 }
 
@@ -429,7 +432,8 @@ table {
           box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
 }
 
-a:active, a:visited {
+a:active,
+a:visited {
   color: inherit;
 }
 
@@ -451,6 +455,12 @@ a:active, a:visited {
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .architecture .arch__block-title {
+    margin-top: -20px;
+  }
 }
 
 .architecture .arch__block-list {
@@ -500,8 +510,8 @@ a:active, a:visited {
 
 @media (max-width: 768px) {
   .architecture .arch__block-item .item-img {
-    width: 360px;
-    height: 360px;
+    width: 375px;
+    height: 375px;
     margin-right: -24px;
     margin-left: -24px;
   }
@@ -557,6 +567,12 @@ a:active, a:visited {
   transition: max-height 2500ms ease;
 }
 
+@media (max-width: 768px) {
+  .arch__project-article {
+    max-width: 100%;
+  }
+}
+
 .arch__project-article-active {
   max-height: 5000px;
 }
@@ -604,84 +620,16 @@ a:active, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 720px;
-  height: 720px;
-  border-bottom: 1px solid #ccc;
+  width: 672px;
+  height: 672px;
   overflow: hidden;
 }
 
-.arch__photo-gallery .prev__img-range,
-.arch__photo-gallery .next__img-range {
-  position: absolute;
-  width: 30%;
-  top: 0;
-  bottom: 0;
-}
-
-.arch__photo-gallery .next__img-range {
-  right: 0;
-}
-
-.arch__photo-gallery .prev__img-btn,
-.arch__photo-gallery .next__img-btn {
-  position: absolute;
-  top: 50%;
-}
-
-.arch__photo-gallery .prev__img-btn {
-  left: 0;
-  width: 24px;
-  height: 17px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.arch__photo-gallery .prev__img-btn :first-child {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.arch__photo-gallery .prev__img-btn :last-child {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.arch__photo-gallery .next__img-btn {
-  right: 0;
-  width: 24px;
-  height: 17px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.arch__photo-gallery .next__img-btn :first-child {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.arch__photo-gallery .next__img-btn :last-child {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+@media (max-width: 768px) {
+  .arch__photo-gallery .photo-gallery-list {
+    width: 375px;
+    height: 375px;
+  }
 }
 
 .arch__photo-gallery img {
@@ -698,8 +646,119 @@ a:active, a:visited {
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .arch__photo-gallery img {
+    width: 85%;
+    -webkit-transform: translateX(102%);
+            transform: translateX(102%);
+    opacity: 0;
+  }
+}
+
 .arch__photo-gallery .active_img {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .active_img {
+    opacity: 1;
+  }
+}
+
+.arch__photo-gallery .arch__photo-gallery-alt {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.arch__photo-gallery .prev__img-range,
+.arch__photo-gallery .next__img-range {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .prev__img-range,
+  .arch__photo-gallery .next__img-range {
+    width: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .prev__img-range {
+    display: none;
+  }
+}
+
+.arch__photo-gallery .next__img-range {
+  right: 0;
+}
+
+.arch__photo-gallery .prev__img-btn,
+.arch__photo-gallery .next__img-btn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 50%;
+  width: 24px;
+  height: 18px;
+}
+
+.arch__photo-gallery .prev__img-btn span,
+.arch__photo-gallery .next__img-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .prev__img-btn,
+  .arch__photo-gallery .next__img-btn {
+    display: none;
+  }
+}
+
+.arch__photo-gallery .prev__img-btn {
+  left: 0;
+}
+
+.arch__photo-gallery .prev__img-btn :first-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arch__photo-gallery .prev__img-btn :last-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arch__photo-gallery .next__img-btn {
+  right: 0;
+}
+
+.arch__photo-gallery .next__img-btn :first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arch__photo-gallery .next__img-btn :last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 /*# sourceMappingURL=style.css.map */
