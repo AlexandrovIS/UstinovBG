@@ -20,26 +20,46 @@ if(btn_learn){
 const image_list=document.querySelectorAll('.photo-gallery-list img')
 const list_length=image_list.length
 let start_img=0
-const btn_slide_next=document.querySelector('.photo-gallery-list')
 
-const  checkImg=(index=start_img)=> {
+const range_slide_next=document.querySelector('.photo-gallery-list .next__img-range')
+const range_slide_prev=document.querySelector('.photo-gallery-list .prev__img-range')
+const btn_slide_prev=document.querySelector('.prev__img-btn')
+const btn_slide_next=document.querySelector('.next__img-btn')
+const alt_field=document.querySelector('.arch__photo-gallery-alt')
+
+const  selectImg=(index=start_img)=> {
   image_list.forEach(item=>item.classList.remove('active_img'))
   image_list[index].classList.add('active_img')
+  alt_field.innerHTML=image_list[index].alt
 }
-checkImg()
 
-btn_slide_next.addEventListener('click',()=>{
- --start_img
-
+const checkIndex=num=>{
+  
+  start_img+=num
   if(start_img >= list_length){
     start_img=0
-    checkImg(start_img)
+    selectImg(start_img)
   } else if(start_img <= -1){
     start_img=list_length-1
-    checkImg(start_img)
+    selectImg(start_img)
   } else(
-    checkImg(start_img)
+    selectImg(start_img)
   )
-})
+}
+
+if(image_list.length>0){
+  selectImg()
+  range_slide_prev.addEventListener('click',checkIndex.bind(this,-1))
+  btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1))
+  range_slide_next.addEventListener('click',checkIndex.bind(this,1))
+  btn_slide_next.addEventListener('click',checkIndex.bind(this,1))
+
+}
+
+
+
+
+
+
 
 

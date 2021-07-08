@@ -195,10 +195,11 @@ table {
 }
 
 .main .main-title {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 18px;
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .header {
@@ -525,6 +526,7 @@ a:active, a:visited {
   line-height: 20px;
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .architecture .arch__block-item .item-desc {
@@ -584,6 +586,7 @@ a:active, a:visited {
 }
 
 .arch__photo-gallery {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,7 +604,84 @@ a:active, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 720px;
+  height: 720px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.arch__photo-gallery .prev__img-range,
+.arch__photo-gallery .next__img-range {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+}
+
+.arch__photo-gallery .next__img-range {
+  right: 0;
+}
+
+.arch__photo-gallery .prev__img-btn,
+.arch__photo-gallery .next__img-btn {
+  position: absolute;
+  top: 50%;
+}
+
+.arch__photo-gallery .prev__img-btn {
+  left: 0;
+  width: 24px;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.arch__photo-gallery .prev__img-btn :first-child {
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arch__photo-gallery .prev__img-btn :last-child {
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arch__photo-gallery .next__img-btn {
+  right: 0;
+  width: 24px;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.arch__photo-gallery .next__img-btn :first-child {
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arch__photo-gallery .next__img-btn :last-child {
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .arch__photo-gallery img {
@@ -609,12 +689,13 @@ a:active, a:visited {
   margin: auto;
   position: absolute;
   top: 0;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-  -webkit-transition: -webkit-transform 700ms ease-in-out;
-  transition: -webkit-transform 700ms ease-in-out;
-  transition: transform 700ms ease-in-out;
-  transition: transform 700ms ease-in-out, -webkit-transform 700ms ease-in-out;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 .arch__photo-gallery .active_img {
