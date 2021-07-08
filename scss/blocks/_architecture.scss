@@ -134,7 +134,7 @@
     top: 0;
     bottom: 0;
     transform: translateX(-100%);
-    transition: transform 300ms ease-in-out;
+    transition: transform 3300ms ease-in-out;
 
     @include mobile {
       width: 85%;
@@ -145,6 +145,7 @@
 
   .active_img {
     transform: translateX(0%);
+    transition: transform 1000ms ease;
 
     @include mobile {
       opacity: 1;

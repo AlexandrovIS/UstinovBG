@@ -36,7 +36,6 @@ const  selectImg=(index=start_img)=> {
 
 const selectOpacityImg=(index=start_op)=>{
   image_list[index].style.opacity=1;
-  console.log(index)
 }
 
 const checkIndex=num=>{

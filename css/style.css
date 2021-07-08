@@ -640,10 +640,10 @@ a:visited {
   bottom: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: -webkit-transform 3300ms ease-in-out;
+  transition: -webkit-transform 3300ms ease-in-out;
+  transition: transform 3300ms ease-in-out;
+  transition: transform 3300ms ease-in-out, -webkit-transform 3300ms ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -658,6 +658,10 @@ a:visited {
 .arch__photo-gallery .active_img {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+  -webkit-transition: -webkit-transform 1000ms ease;
+  transition: -webkit-transform 1000ms ease;
+  transition: transform 1000ms ease;
+  transition: transform 1000ms ease, -webkit-transform 1000ms ease;
 }
 
 @media (max-width: 768px) {
