@@ -19,7 +19,7 @@ if(btn_learn){
 //Gallery
 const image_list=document.querySelectorAll('.photo-gallery-list img')
 const list_length=image_list.length
-let start_img=0
+let counter=0
 let start_op=1
 
 const range_slide_next=document.querySelector('.photo-gallery-list .next__img-range')
@@ -28,27 +28,30 @@ const btn_slide_prev=document.querySelector('.prev__img-btn')
 const btn_slide_next=document.querySelector('.next__img-btn')
 const alt_field=document.querySelector('.arch__photo-gallery-alt')
 
-const  selectImg=(index=start_img)=> {
+const  selectImg=(index=0)=> {
   image_list.forEach(item=>item.classList.remove('active_img'))
   image_list[index].classList.add('active_img')
   alt_field.innerHTML=image_list[index].alt
+
+  image_list.forEach(item=>item.style.opacity=0)
+  image_list[index].style.opacity=1
 }
 
 const selectOpacityImg=(index=start_op)=>{
   image_list[index].style.opacity=1;
 }
 
-const checkIndex=num=>{
-  start_img+=num
-
-  if(start_img >= list_length){
-    start_img=0
-    selectImg(start_img)
-  } else if(start_img <= -1){
-    start_img=list_length-1
-    selectImg(start_img)
+const checkIndex=index=>{
+  counter+=index
+  console.log(counter)
+  if(counter >= list_length){
+    counter=0
+    selectImg(counter)
+  } else if(counter <= -1){
+    counter=list_length-1
+    selectImg(counter)
   } else(
-    selectImg(start_img)
+    selectImg(counter)
   )
 }
 
