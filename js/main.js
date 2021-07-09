@@ -41,43 +41,31 @@ const selectOpacityImg=(index=start_op)=>{
   image_list[index].style.opacity=1;
 }
 
-const checkIndex=index=>{
+const checkIndex=(index,func)=>{
   counter+=index
-  console.log(counter)
+  
   if(counter >= list_length){
     counter=0
-    selectImg(counter)
+    func(counter)
   } else if(counter <= -1){
     counter=list_length-1
-    selectImg(counter)
+    func(counter)
   } else(
-    selectImg(counter)
+    func(counter)
   )
 }
 
-const checkIndexOpacity=(num)=>{
-  start_op+=num
 
-  if(start_op >= list_length){
-    start_op=0
-    selectOpacityImg(start_op)
-  } else if(start_op <= -1){
-    start_op=list_length-1
-    selectOpacityImg(start_op)
-  } else(
-    selectOpacityImg(start_op)
-  )
-}
 
 if(image_list.length>0){
   selectImg()
   selectOpacityImg()
-  range_slide_prev.addEventListener('click',checkIndex.bind(this,-1))
-  btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1))
-  range_slide_next.addEventListener('click',checkIndex.bind(this,1))
-  btn_slide_next.addEventListener('click',checkIndex.bind(this,1))
+  range_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
+  btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
+  range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
+  btn_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
 
-  range_slide_next.addEventListener('click',checkIndexOpacity.bind(this,1))
+  range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectOpacityImg))
 
 }
 
