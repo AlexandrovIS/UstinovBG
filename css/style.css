@@ -258,8 +258,8 @@ table {
     top: -200px;
     bottom: auto;
     left: 0;
-    -webkit-transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
-    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
+    -webkit-transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
+    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
   }
 }
 
@@ -640,34 +640,15 @@ a:visited {
   bottom: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 3300ms ease-in-out;
-  transition: -webkit-transform 3300ms ease-in-out;
-  transition: transform 3300ms ease-in-out;
-  transition: transform 3300ms ease-in-out, -webkit-transform 3300ms ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .arch__photo-gallery img {
-    width: 85%;
-    -webkit-transform: translateX(102%);
-            transform: translateX(102%);
-    opacity: 0;
-  }
+  opacity: 0;
+  -webkit-transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .arch__photo-gallery .active_img {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  -webkit-transition: -webkit-transform 1000ms ease;
-  transition: -webkit-transform 1000ms ease;
-  transition: transform 1000ms ease;
-  transition: transform 1000ms ease, -webkit-transform 1000ms ease;
-}
-
-@media (max-width: 768px) {
-  .arch__photo-gallery .active_img {
-    opacity: 1;
-  }
+  opacity: 1;
 }
 
 .arch__photo-gallery .arch__photo-gallery-alt {
@@ -686,19 +667,6 @@ a:visited {
   width: 30%;
   top: 0;
   bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .arch__photo-gallery .prev__img-range,
-  .arch__photo-gallery .next__img-range {
-    width: 15%;
-  }
-}
-
-@media (max-width: 768px) {
-  .arch__photo-gallery .prev__img-range {
-    display: none;
-  }
 }
 
 .arch__photo-gallery .next__img-range {
@@ -734,12 +702,22 @@ a:visited {
 @media (max-width: 768px) {
   .arch__photo-gallery .prev__img-btn,
   .arch__photo-gallery .next__img-btn {
-    display: none;
+    width: 14px;
+    height: 12px;
+    top: 100%;
   }
 }
 
 .arch__photo-gallery .prev__img-btn {
   left: 0;
+  margin-left: -24px;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .prev__img-btn {
+    left: 40%;
+    margin: 4px 0;
+  }
 }
 
 .arch__photo-gallery .prev__img-btn :first-child {
@@ -754,6 +732,14 @@ a:visited {
 
 .arch__photo-gallery .next__img-btn {
   right: 0;
+  margin-right: -24px;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .next__img-btn {
+    right: 40%;
+    margin: 4px 0;
+  }
 }
 
 .arch__photo-gallery .next__img-btn :first-child {

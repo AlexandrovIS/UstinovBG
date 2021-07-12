@@ -20,7 +20,6 @@ if(btn_learn){
 const image_list=document.querySelectorAll('.photo-gallery-list img')
 const list_length=image_list.length
 let counter=0
-let start_op=1
 
 const range_slide_next=document.querySelector('.photo-gallery-list .next__img-range')
 const range_slide_prev=document.querySelector('.photo-gallery-list .prev__img-range')
@@ -32,13 +31,6 @@ const  selectImg=(index=0)=> {
   image_list.forEach(item=>item.classList.remove('active_img'))
   image_list[index].classList.add('active_img')
   alt_field.innerHTML=image_list[index].alt
-
-  image_list.forEach(item=>item.style.opacity=0)
-  image_list[index].style.opacity=1
-}
-
-const selectOpacityImg=(index=start_op)=>{
-  image_list[index].style.opacity=1;
 }
 
 const checkIndex=(index,func)=>{
@@ -55,18 +47,12 @@ const checkIndex=(index,func)=>{
   )
 }
 
-
-
 if(image_list.length>0){
   selectImg()
-  selectOpacityImg()
   range_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
   btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
   range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
   btn_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
-
-  range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectOpacityImg))
-
 }
 
 

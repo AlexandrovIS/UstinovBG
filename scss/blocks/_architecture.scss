@@ -134,22 +134,16 @@
     top: 0;
     bottom: 0;
     transform: translateX(-100%);
-    transition: transform 3300ms ease-in-out;
-
-    @include mobile {
-      width: 85%;
-      transform: translateX(102%);
-      opacity: 0;
-    }
+    opacity: 0;
+    //disappear
+    transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .active_img {
     transform: translateX(0%);
-    transition: transform 1000ms ease;
-
-    @include mobile {
-      opacity: 1;
-    }
+    opacity: 1;
+    //appear 
+    // transition: opacity 800ms ease;
   }
 
   .arch__photo-gallery-alt {
@@ -158,22 +152,13 @@
     bottom: 0;
     width: 100%;
   }
+
   .prev__img-range,
   .next__img-range {
     position: absolute;
     width: 30%;
     top: 0;
     bottom: 0;
-
-    @include mobile {
-      width: 15%;
-    }
-  }
-
-  .prev__img-range {
-    @include mobile {
-      display: none;
-    }
   }
 
   .next__img-range {
@@ -198,12 +183,20 @@
     }
 
     @include mobile {
-      display: none;
+      width: 14px;
+      height: 12px;
+      top:100%;
     }
   }
 
   .prev__img-btn {
     left: 0;
+    margin-left: -24px;
+
+    @include mobile{
+      left: 40%;
+      margin: 4px 0;
+    }
 
     :first-child {
       transform: rotate(-45deg);
@@ -215,6 +208,12 @@
 
   .next__img-btn {
     right: 0;
+    margin-right: -24px;
+
+    @include mobile{
+      right: 40%;
+      margin: 4px 0;
+    }
 
     :first-child {
       transform: rotate(45deg);
