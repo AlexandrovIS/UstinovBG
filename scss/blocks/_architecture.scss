@@ -43,6 +43,13 @@
           margin-right: -24px;
           margin-left: -24px;
         }
+
+        @include mobile-320px{
+          width: 320px;
+          height: 320px;
+          margin-right: -24px;
+          margin-left: -24px;
+        }
       }
 
       .item-img:hover img {
@@ -125,6 +132,11 @@
       width: $arch_slider_size-mob;
       height: $arch_slider_size-mob;
     }
+
+    @include mobile-320px{
+      width: 320px;
+      height: 320px;
+    }
   }
 
   img {
@@ -151,7 +163,19 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
+    border: 1px solid #000;
+
+    @include mobile{
+     padding-left: 24px;
+    }
+
+    @include mobile-320px{
+      padding-left: 24px;
+    }
+
+  } 
+
+
 
   .prev__img-range,
   .next__img-range {

@@ -30,17 +30,17 @@
 
   @include mobile {
     z-index: 1;
-    width: 100%;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
     background-color: $menu_background;
     position: absolute;
     top: -200px;
-    bottom: auto;
     left: 0;
+    right: 0;
+    height: 100vh;
     //up
     transition: top 700ms ease-in, opacity 450ms linear,
-      background-color 300ms ease-out;
+      background-color 300ms ease-out,visibility 700ms ease;
   }
 
   &-list {
@@ -66,6 +66,10 @@
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
+    } 
+
+    @include  mobile-height{
+      min-height: 60px;
     }
 
     &-active {
@@ -91,7 +95,6 @@
 .nav_active {
   @include mobile {
     top: 121px;
-    bottom: 0;
     opacity: 1;
     visibility: visible;
     //down
