@@ -44,7 +44,7 @@
           margin-left: -24px;
         }
 
-        @include mobile-320px{
+        @include mobile-320px {
           width: 320px;
           height: 320px;
           margin-right: -24px;
@@ -133,7 +133,7 @@
       height: $arch_slider_size-mob;
     }
 
-    @include mobile-320px{
+    @include mobile-320px {
       width: 320px;
       height: 320px;
     }
@@ -154,7 +154,7 @@
   .active_img {
     transform: translateX(0%);
     opacity: 1;
-    //appear 
+    //appear
     // transition: opacity 800ms ease;
   }
 
@@ -163,19 +163,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    border: 1px solid #000;
 
-    @include mobile{
-     padding-left: 24px;
-    }
-
-    @include mobile-320px{
+    @include mobile {
       padding-left: 24px;
     }
-
-  } 
-
-
+  }
 
   .prev__img-range,
   .next__img-range {
@@ -209,7 +201,7 @@
     @include mobile {
       width: 14px;
       height: 12px;
-      top:100%;
+      top: 100%;
     }
   }
 
@@ -217,9 +209,9 @@
     left: 0;
     margin-left: -24px;
 
-    @include mobile{
-      left: 40%;
-      margin: 4px 0;
+    @include mobile {
+      // left: 40%;
+      margin: 7px 0;
     }
 
     :first-child {
@@ -234,9 +226,9 @@
     right: 0;
     margin-right: -24px;
 
-    @include mobile{
-      right: 40%;
-      margin: 4px 0;
+    @include mobile {
+      // right: 40%;
+      margin: 7px 0;
     }
 
     :first-child {

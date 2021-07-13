@@ -34,13 +34,14 @@
     opacity: 0;
     background-color: $menu_background;
     position: absolute;
-    top: -200px;
+    top: 121px;
     left: 0;
     right: 0;
     height: 100vh;
     //up
-    transition: top 700ms ease-in, opacity 450ms linear,
-      background-color 300ms ease-out,visibility 700ms ease;
+    // transition: opacity 450ms linear, background-color 300ms ease-out,
+    //   visibility 700ms ease;
+    transition: opacity 450ms ease-in, visibility 900ms ease;
   }
 
   &-list {
@@ -50,6 +51,19 @@
 
     @include mobile {
       flex-direction: column;
+
+      :nth-child(1) {
+        transform: translateY(-50%);
+        transition: transform 300ms ease-in;
+      }
+      :nth-child(2) {
+        transform: translateY(-150%);
+        transition: transform 600ms ease-in;
+      }
+      :nth-child(3) {
+        transform: translateY(-250%);
+        transition: transform 900ms ease-in;
+      }
     }
   }
 
@@ -62,13 +76,16 @@
     padding-top: 25px;
     transition: box-shadow 0.5s ease;
 
+    @include mobile {
+    }
+
     a {
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
-    } 
+    }
 
-    @include  mobile-height{
+    @include mobile-height {
       min-height: 60px;
     }
 
@@ -97,8 +114,21 @@
     top: 121px;
     opacity: 1;
     visibility: visible;
+
     //down
     // transition: top 350ms ease-out, opacity 250ms ease-out, background-color 250ms ease-out;
+    transition: opacity 900ms ease-out;
+    .nav-list {
+      :nth-child(1) {
+        transform: translateY(0);
+      }
+      :nth-child(2) {
+        transform: translateY(0);
+      }
+      :nth-child(3) {
+        transform: translateY(0);
+      }
+    }
   }
 }
 

@@ -254,12 +254,12 @@ table {
     opacity: 0;
     background-color: white;
     position: absolute;
-    top: -200px;
+    top: 121px;
     left: 0;
     right: 0;
     height: 100vh;
-    -webkit-transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out,visibility 700ms ease;
-    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out,visibility 700ms ease;
+    -webkit-transition: opacity 450ms ease-in, visibility 900ms ease;
+    transition: opacity 450ms ease-in, visibility 900ms ease;
   }
 }
 
@@ -279,6 +279,30 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .nav-list :nth-child(1) {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 300ms ease-in;
+    transition: -webkit-transform 300ms ease-in;
+    transition: transform 300ms ease-in;
+    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  }
+  .nav-list :nth-child(2) {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: -webkit-transform 600ms ease-in;
+    transition: -webkit-transform 600ms ease-in;
+    transition: transform 600ms ease-in;
+    transition: transform 600ms ease-in, -webkit-transform 600ms ease-in;
+  }
+  .nav-list :nth-child(3) {
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    -webkit-transition: -webkit-transform 900ms ease-in;
+    transition: -webkit-transform 900ms ease-in;
+    transition: transform 900ms ease-in;
+    transition: transform 900ms ease-in, -webkit-transform 900ms ease-in;
   }
 }
 
@@ -349,6 +373,20 @@ table {
     top: 121px;
     opacity: 1;
     visibility: visible;
+    -webkit-transition: opacity 900ms ease-out;
+    transition: opacity 900ms ease-out;
+  }
+  .nav_active .nav-list :nth-child(1) {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .nav_active .nav-list :nth-child(2) {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .nav_active .nav-list :nth-child(3) {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -680,16 +718,9 @@ a:visited {
   position: absolute;
   bottom: 0;
   width: 100%;
-  border: 1px solid #000;
 }
 
 @media (max-width: 768px) {
-  .arch__photo-gallery .arch__photo-gallery-alt {
-    padding-left: 24px;
-  }
-}
-
-@media (max-width: 320px) {
   .arch__photo-gallery .arch__photo-gallery-alt {
     padding-left: 24px;
   }
@@ -749,8 +780,7 @@ a:visited {
 
 @media (max-width: 768px) {
   .arch__photo-gallery .prev__img-btn {
-    left: 40%;
-    margin: 4px 0;
+    margin: 7px 0;
   }
 }
 
@@ -771,8 +801,7 @@ a:visited {
 
 @media (max-width: 768px) {
   .arch__photo-gallery .next__img-btn {
-    right: 40%;
-    margin: 4px 0;
+    margin: 7px 0;
   }
 }
 
