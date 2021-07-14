@@ -39,9 +39,7 @@
     right: 0;
     height: 100vh;
     //up
-    // transition: opacity 450ms linear, background-color 300ms ease-out,
-    //   visibility 700ms ease;
-    transition: opacity 450ms ease-in, visibility 900ms ease;
+    transition: opacity 300ms ease-in, visibility 900ms ease-in;
   }
 
   &-list {
@@ -53,16 +51,13 @@
       flex-direction: column;
 
       :nth-child(1) {
-        transform: translateY(-50%);
-        transition: transform 300ms ease-in;
+        animation: menuup 300ms ease-in-out both;
       }
       :nth-child(2) {
-        transform: translateY(-150%);
-        transition: transform 600ms ease-in;
+        animation: menuup 500ms ease-in-out;
       }
       :nth-child(3) {
-        transform: translateY(-250%);
-        transition: transform 900ms ease-in;
+        animation: menuup 700ms ease-in-out;
       }
     }
   }
@@ -111,22 +106,19 @@
 
 .nav_active {
   @include mobile {
-    top: 121px;
     opacity: 1;
     visibility: visible;
-
     //down
-    // transition: top 350ms ease-out, opacity 250ms ease-out, background-color 250ms ease-out;
-    transition: opacity 900ms ease-out;
+
     .nav-list {
       :nth-child(1) {
-        transform: translateY(0);
+        animation: menudown 500ms ease-in-out;
       }
       :nth-child(2) {
-        transform: translateY(0);
+        animation: menudown 700ms ease-in-out;
       }
       :nth-child(3) {
-        transform: translateY(0);
+        animation: menudown 900ms ease-in-out;
       }
     }
   }
@@ -206,4 +198,26 @@
 a:active,
 a:visited {
   color: inherit;
+}
+
+@keyframes menudown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes menuup {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }

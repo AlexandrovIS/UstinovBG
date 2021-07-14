@@ -258,8 +258,8 @@ table {
     left: 0;
     right: 0;
     height: 100vh;
-    -webkit-transition: opacity 450ms ease-in, visibility 900ms ease;
-    transition: opacity 450ms ease-in, visibility 900ms ease;
+    -webkit-transition: opacity 300ms ease-in, visibility 900ms ease-in;
+    transition: opacity 300ms ease-in, visibility 900ms ease-in;
   }
 }
 
@@ -281,28 +281,16 @@ table {
             flex-direction: column;
   }
   .nav-list :nth-child(1) {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition: -webkit-transform 300ms ease-in;
-    transition: -webkit-transform 300ms ease-in;
-    transition: transform 300ms ease-in;
-    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+    -webkit-animation: menuup 300ms ease-in-out both;
+            animation: menuup 300ms ease-in-out both;
   }
   .nav-list :nth-child(2) {
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
-    -webkit-transition: -webkit-transform 600ms ease-in;
-    transition: -webkit-transform 600ms ease-in;
-    transition: transform 600ms ease-in;
-    transition: transform 600ms ease-in, -webkit-transform 600ms ease-in;
+    -webkit-animation: menuup 500ms ease-in-out;
+            animation: menuup 500ms ease-in-out;
   }
   .nav-list :nth-child(3) {
-    -webkit-transform: translateY(-250%);
-            transform: translateY(-250%);
-    -webkit-transition: -webkit-transform 900ms ease-in;
-    transition: -webkit-transform 900ms ease-in;
-    transition: transform 900ms ease-in;
-    transition: transform 900ms ease-in, -webkit-transform 900ms ease-in;
+    -webkit-animation: menuup 700ms ease-in-out;
+            animation: menuup 700ms ease-in-out;
   }
 }
 
@@ -370,23 +358,20 @@ table {
 
 @media (max-width: 768px) {
   .nav_active {
-    top: 121px;
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity 900ms ease-out;
-    transition: opacity 900ms ease-out;
   }
   .nav_active .nav-list :nth-child(1) {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-animation: menudown 500ms ease-in-out;
+            animation: menudown 500ms ease-in-out;
   }
   .nav_active .nav-list :nth-child(2) {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-animation: menudown 700ms ease-in-out;
+            animation: menudown 700ms ease-in-out;
   }
   .nav_active .nav-list :nth-child(3) {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-animation: menudown 900ms ease-in-out;
+            animation: menudown 900ms ease-in-out;
   }
 }
 
@@ -478,6 +463,58 @@ table {
 a:active,
 a:visited {
   color: inherit;
+}
+
+@-webkit-keyframes menudown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes menudown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes menuup {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes menuup {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
 }
 
 .architecture .arch__block {
