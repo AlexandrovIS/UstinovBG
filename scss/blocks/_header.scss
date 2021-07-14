@@ -30,17 +30,26 @@
 
   @include mobile {
     z-index: 1;
+<<<<<<< HEAD
     width: 100%;
     visibility: visible;
+=======
+    visibility: hidden;
+>>>>>>> Slider
     opacity: 0;
     background-color: $menu_background;
     position: absolute;
-    top: -200px;
-    bottom: auto;
+    top: 121px;
     left: 0;
+    right: 0;
+    height: 100vh;
     //up
+<<<<<<< HEAD
     transition: top 700ms ease-in, opacity 450ms linear,
       background-color 300ms ease-out;
+=======
+    transition: opacity 300ms ease-in, visibility 900ms ease-in;
+>>>>>>> Slider
   }
 
   &-list {
@@ -50,6 +59,16 @@
 
     @include mobile {
       flex-direction: column;
+
+      :nth-child(1) {
+        animation: menuup 300ms ease-in-out both;
+      }
+      :nth-child(2) {
+        animation: menuup 500ms ease-in-out;
+      }
+      :nth-child(3) {
+        animation: menuup 700ms ease-in-out;
+      }
     }
   }
 
@@ -62,10 +81,20 @@
     padding-top: 25px;
     transition: box-shadow 0.5s ease;
 
+    @include mobile {
+    }
+
     a {
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
+<<<<<<< HEAD
+=======
+    }
+
+    @include mobile-height {
+      min-height: 60px;
+>>>>>>> Slider
     }
 
     &-active {
@@ -90,12 +119,26 @@
 
 .nav_active {
   @include mobile {
+<<<<<<< HEAD
     top: 121px;
     bottom: 0;
+=======
+>>>>>>> Slider
     opacity: 1;
     visibility: visible;
     //down
-    // transition: top 350ms ease-out, opacity 250ms ease-out, background-color 250ms ease-out;
+
+    .nav-list {
+      :nth-child(1) {
+        animation: menudown 500ms ease-in-out;
+      }
+      :nth-child(2) {
+        animation: menudown 700ms ease-in-out;
+      }
+      :nth-child(3) {
+        animation: menudown 900ms ease-in-out;
+      }
+    }
   }
 }
 
@@ -173,4 +216,29 @@
 a:active,
 a:visited {
   color: inherit;
+<<<<<<< HEAD
+=======
+}
+
+@keyframes menudown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes menuup {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+>>>>>>> Slider
 }

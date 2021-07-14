@@ -43,6 +43,16 @@
           margin-right: -24px;
           margin-left: -24px;
         }
+<<<<<<< HEAD
+=======
+
+        @include mobile-320px {
+          width: 320px;
+          height: 320px;
+          margin-right: -24px;
+          margin-left: -24px;
+        }
+>>>>>>> Slider
       }
 
       .item-img:hover img {
@@ -125,6 +135,14 @@
       width: $arch_slider_size-mob;
       height: $arch_slider_size-mob;
     }
+<<<<<<< HEAD
+=======
+
+    @include mobile-320px {
+      width: 320px;
+      height: 320px;
+    }
+>>>>>>> Slider
   }
 
   img {
@@ -134,6 +152,7 @@
     top: 0;
     bottom: 0;
     transform: translateX(-100%);
+<<<<<<< HEAD
     transition: transform 300ms ease-in-out;
 
     @include mobile {
@@ -141,14 +160,25 @@
       transform: translateX(102%);
       opacity: 0;
     }
+=======
+    opacity: 0;
+    //disappear
+    transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+>>>>>>> Slider
   }
 
   .active_img {
     transform: translateX(0%);
+<<<<<<< HEAD
 
     @include mobile {
       opacity: 1;
     }
+=======
+    opacity: 1;
+    //appear
+    // transition: opacity 800ms ease;
+>>>>>>> Slider
   }
 
   .arch__photo-gallery-alt {
@@ -156,13 +186,23 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+<<<<<<< HEAD
   }
+=======
+
+    @include mobile {
+      padding-left: 24px;
+    }
+  }
+
+>>>>>>> Slider
   .prev__img-range,
   .next__img-range {
     position: absolute;
     width: 30%;
     top: 0;
     bottom: 0;
+<<<<<<< HEAD
 
     @include mobile {
       width: 15%;
@@ -173,6 +213,8 @@
     @include mobile {
       display: none;
     }
+=======
+>>>>>>> Slider
   }
 
   .next__img-range {
@@ -197,12 +239,27 @@
     }
 
     @include mobile {
+<<<<<<< HEAD
       display: none;
+=======
+      width: 14px;
+      height: 12px;
+      top: 100%;
+>>>>>>> Slider
     }
   }
 
   .prev__img-btn {
     left: 0;
+<<<<<<< HEAD
+=======
+    margin-left: -24px;
+
+    @include mobile {
+      // left: 40%;
+      margin: 7px 0;
+    }
+>>>>>>> Slider
 
     :first-child {
       transform: rotate(-45deg);
@@ -214,6 +271,15 @@
 
   .next__img-btn {
     right: 0;
+<<<<<<< HEAD
+=======
+    margin-right: -24px;
+
+    @include mobile {
+      // right: 40%;
+      margin: 7px 0;
+    }
+>>>>>>> Slider
 
     :first-child {
       transform: rotate(45deg);

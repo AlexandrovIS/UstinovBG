@@ -250,16 +250,21 @@ table {
 @media (max-width: 768px) {
   .nav {
     z-index: 1;
+<<<<<<< HEAD
     width: 100%;
     visibility: visible;
+=======
+    visibility: hidden;
+>>>>>>> Slider
     opacity: 0;
     background-color: white;
     position: absolute;
-    top: -200px;
-    bottom: auto;
+    top: 121px;
     left: 0;
-    -webkit-transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
-    transition: top 700ms ease-in, opacity 450ms linear, background-color 300ms ease-out;
+    right: 0;
+    height: 100vh;
+    -webkit-transition: opacity 300ms ease-in, visibility 900ms ease-in;
+    transition: opacity 300ms ease-in, visibility 900ms ease-in;
   }
 }
 
@@ -279,6 +284,18 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .nav-list :nth-child(1) {
+    -webkit-animation: menuup 300ms ease-in-out both;
+            animation: menuup 300ms ease-in-out both;
+  }
+  .nav-list :nth-child(2) {
+    -webkit-animation: menuup 500ms ease-in-out;
+            animation: menuup 500ms ease-in-out;
+  }
+  .nav-list :nth-child(3) {
+    -webkit-animation: menuup 700ms ease-in-out;
+            animation: menuup 700ms ease-in-out;
   }
 }
 
@@ -312,6 +329,12 @@ table {
   text-transform: lowercase;
 }
 
+@media (max-height: 480px) {
+  .nav-item {
+    min-height: 60px;
+  }
+}
+
 .nav-item-active {
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.9);
           box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.9);
@@ -340,10 +363,25 @@ table {
 
 @media (max-width: 768px) {
   .nav_active {
+<<<<<<< HEAD
     top: 121px;
     bottom: 0;
+=======
+>>>>>>> Slider
     opacity: 1;
     visibility: visible;
+  }
+  .nav_active .nav-list :nth-child(1) {
+    -webkit-animation: menudown 500ms ease-in-out;
+            animation: menudown 500ms ease-in-out;
+  }
+  .nav_active .nav-list :nth-child(2) {
+    -webkit-animation: menudown 700ms ease-in-out;
+            animation: menudown 700ms ease-in-out;
+  }
+  .nav_active .nav-list :nth-child(3) {
+    -webkit-animation: menudown 900ms ease-in-out;
+            animation: menudown 900ms ease-in-out;
   }
 }
 
@@ -437,6 +475,61 @@ a:visited {
   color: inherit;
 }
 
+<<<<<<< HEAD
+=======
+@-webkit-keyframes menudown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes menudown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes menuup {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes menuup {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+>>>>>>> Slider
 .architecture .arch__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,6 +610,18 @@ a:visited {
   }
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 320px) {
+  .architecture .arch__block-item .item-img {
+    width: 320px;
+    height: 320px;
+    margin-right: -24px;
+    margin-left: -24px;
+  }
+}
+
+>>>>>>> Slider
 .architecture .arch__block-item .item-img:hover img {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
@@ -632,6 +737,16 @@ a:visited {
   }
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 320px) {
+  .arch__photo-gallery .photo-gallery-list {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+>>>>>>> Slider
 .arch__photo-gallery img {
   width: 100%;
   margin: auto;
@@ -640,6 +755,7 @@ a:visited {
   bottom: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+<<<<<<< HEAD
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
@@ -653,17 +769,26 @@ a:visited {
             transform: translateX(102%);
     opacity: 0;
   }
+=======
+  opacity: 0;
+  -webkit-transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+>>>>>>> Slider
 }
 
 .arch__photo-gallery .active_img {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+<<<<<<< HEAD
 }
 
 @media (max-width: 768px) {
   .arch__photo-gallery .active_img {
     opacity: 1;
   }
+=======
+  opacity: 1;
+>>>>>>> Slider
 }
 
 .arch__photo-gallery .arch__photo-gallery-alt {
@@ -676,6 +801,15 @@ a:visited {
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 768px) {
+  .arch__photo-gallery .arch__photo-gallery-alt {
+    padding-left: 24px;
+  }
+}
+
+>>>>>>> Slider
 .arch__photo-gallery .prev__img-range,
 .arch__photo-gallery .next__img-range {
   position: absolute;
@@ -684,6 +818,7 @@ a:visited {
   bottom: 0;
 }
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .arch__photo-gallery .prev__img-range,
   .arch__photo-gallery .next__img-range {
@@ -697,6 +832,8 @@ a:visited {
   }
 }
 
+=======
+>>>>>>> Slider
 .arch__photo-gallery .next__img-range {
   right: 0;
 }
@@ -730,12 +867,28 @@ a:visited {
 @media (max-width: 768px) {
   .arch__photo-gallery .prev__img-btn,
   .arch__photo-gallery .next__img-btn {
+<<<<<<< HEAD
     display: none;
+=======
+    width: 14px;
+    height: 12px;
+    top: 100%;
+>>>>>>> Slider
   }
 }
 
 .arch__photo-gallery .prev__img-btn {
   left: 0;
+<<<<<<< HEAD
+=======
+  margin-left: -24px;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .prev__img-btn {
+    margin: 7px 0;
+  }
+>>>>>>> Slider
 }
 
 .arch__photo-gallery .prev__img-btn :first-child {
@@ -750,6 +903,16 @@ a:visited {
 
 .arch__photo-gallery .next__img-btn {
   right: 0;
+<<<<<<< HEAD
+=======
+  margin-right: -24px;
+}
+
+@media (max-width: 768px) {
+  .arch__photo-gallery .next__img-btn {
+    margin: 7px 0;
+  }
+>>>>>>> Slider
 }
 
 .arch__photo-gallery .next__img-btn :first-child {
