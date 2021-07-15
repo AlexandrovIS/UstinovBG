@@ -3,6 +3,17 @@
  display: flex;
  gap: 24px;
 
+ @include mobile{
+   flex-direction: column;
+ }
+ .biography-img{
+   @include mobile{
+     width: 375px;
+     height: auto;
+     align-self: center;
+   }
+ }
+
  .biography-article{
   position: relative;
   text-align: justify;
@@ -29,6 +40,11 @@
   justify-content: space-between;
   transition: opacity 300ms ease-out;
 
+  @include mobile{
+    width: 10px;
+    height: 8px;
+    margin-bottom: -10px;
+  }
   span{
     height: 2px;
    background-color: black;
