@@ -6,6 +6,7 @@
  @include mobile{
    flex-direction: column;
  }
+
  .biography-img{
    @include mobile{
      width: 375px;
@@ -15,6 +16,7 @@
  }
 
  .biography-article{
+  width: 100%;
   position: relative;
   text-align: justify;
   @include font(16,18);
@@ -46,7 +48,7 @@
     margin-bottom: -10px;
   }
   span{
-    height: 2px;
+   height: 2px;
    background-color: black;
    border-radius: 5px;
   }
@@ -58,6 +60,9 @@
  }
 
  .biography-article-bnt-prev{
+  @include mobile{
+    display: none;
+  }
    :nth-child(1){
     transform: rotate(-45deg);
    }
@@ -67,6 +72,11 @@
  }
  .biography-article-bnt-next{
    right: 0;
+
+   @include mobile{
+     top:0;
+   }
+
    :nth-child(1){
     transform: rotate(45deg);
   }
@@ -76,9 +86,11 @@
  }
 
  .biography-article-slide{
-   display: none;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
  }
  .biography-article-slide-active{
-   display: block;
+  opacity: 1;
  }
 }
