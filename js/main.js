@@ -33,14 +33,14 @@ const  selectImg=(index=0)=> {
   alt_field.innerHTML=image_list[index].alt
 }
 
-const checkIndex=(index,func)=>{
+const checkIndex=(index,func,length)=>{
   counter+=index
   
-  if(counter >= list_length){
+  if(counter >= length){
     counter=0
     func(counter)
   } else if(counter <= -1){
-    counter=list_length-1
+    counter=length-1
     func(counter)
   } else(
     func(counter)
@@ -49,16 +49,28 @@ const checkIndex=(index,func)=>{
 
 if(image_list.length>0){
   selectImg()
-  range_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
-  btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg))
-  range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
-  btn_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg))
+  range_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg,list_length))
+  btn_slide_prev.addEventListener('click',checkIndex.bind(this,-1,selectImg,list_length))
+  range_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg,list_length))
+  btn_slide_next.addEventListener('click',checkIndex.bind(this,1,selectImg,list_length))
 }
 
+//biography slider
+const article_list=document.querySelectorAll('.biography-section .biography-article-slide')
+const article_list_lenght=article_list.length
+const btn_article_prev=document.querySelector('.biography-article-bnt-prev')
+const btn_article_next=document.querySelector('.biography-article-bnt-next')
 
+const selectArticle=(index=0)=>{
+  article_list.forEach(item=>item.classList.remove('biography-article-slide-active'))
+  article_list[index].classList.add('biography-article-slide-active')
+}
 
-
-
+if(article_list.length>0){
+  selectArticle()
+  btn_article_prev.addEventListener('click',checkIndex.bind(this,-1,selectArticle,article_list_lenght))
+  btn_article_next.addEventListener('click',checkIndex.bind(this,1,selectArticle,article_list_lenght))
+}
 
 
 
