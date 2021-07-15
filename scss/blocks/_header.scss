@@ -30,12 +30,7 @@
 
   @include mobile {
     z-index: 1;
-<<<<<<< HEAD
-    width: 100%;
-    visibility: visible;
-=======
     visibility: hidden;
->>>>>>> Slider
     opacity: 0;
     background-color: $menu_background;
     position: absolute;
@@ -44,12 +39,7 @@
     right: 0;
     height: 100vh;
     //up
-<<<<<<< HEAD
-    transition: top 700ms ease-in, opacity 450ms linear,
-      background-color 300ms ease-out;
-=======
     transition: opacity 300ms ease-in, visibility 900ms ease-in;
->>>>>>> Slider
   }
 
   &-list {
@@ -88,13 +78,10 @@
       @include font(16, 20, bold);
       color: inherit;
       text-transform: lowercase;
-<<<<<<< HEAD
-=======
     }
 
     @include mobile-height {
       min-height: 60px;
->>>>>>> Slider
     }
 
     &-active {
@@ -119,11 +106,6 @@
 
 .nav_active {
   @include mobile {
-<<<<<<< HEAD
-    top: 121px;
-    bottom: 0;
-=======
->>>>>>> Slider
     opacity: 1;
     visibility: visible;
     //down
@@ -216,8 +198,6 @@
 a:active,
 a:visited {
   color: inherit;
-<<<<<<< HEAD
-=======
 }
 
 @keyframes menudown {
@@ -240,5 +220,4 @@ a:visited {
     opacity: 0;
     transform: translateY(-100%);
   }
->>>>>>> Slider
 }
