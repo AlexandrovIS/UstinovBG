@@ -1,0 +1,68 @@
+.biography-section{
+ padding-top: 24px;
+ display: flex;
+ gap: 24px;
+
+ .biography-article{
+  position: relative;
+  text-align: justify;
+  @include font(16,18);
+
+  &-title{
+    @include font(16,18,bold);
+    margin-bottom: 10px;
+  }
+
+  &-paragraph{
+    margin-bottom: 10px;
+  }
+ }
+
+ .biography-article-bnt-prev,
+ .biography-article-bnt-next{
+  position: absolute;
+  bottom: 0;
+  width: 16px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 300ms ease-out;
+
+  span{
+    height: 2px;
+   background-color: black;
+   border-radius: 5px;
+  }
+ }
+
+ .biography-article-bnt-prev:hover,
+ .biography-article-bnt-next:hover{
+   opacity: .7;
+ }
+
+ .biography-article-bnt-prev{
+   :nth-child(1){
+    transform: rotate(-45deg);
+   }
+   :nth-child(2){
+    transform: rotate(45deg);
+  }
+ }
+ .biography-article-bnt-next{
+   right: 0;
+   :nth-child(1){
+    transform: rotate(45deg);
+  }
+  :nth-child(2){
+    transform: rotate(-45deg);
+ }
+ }
+
+ .biography-article-slide{
+   display: none;
+ }
+ .biography-article-slide-active{
+   display: block;
+ }
+}

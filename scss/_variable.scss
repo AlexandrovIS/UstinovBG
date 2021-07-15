@@ -3,6 +3,7 @@ $mobile-width: 768px;
 $mobile-320px:320px;
 $mobile-heigth:480px;
 
+//____________ Header ____________//
 $header_grey_line: rgba(0, 0, 0, 0.3);
 $header_hover_item: rgba(0, 0, 0, 0.5);
 $header_active_item: rgba(0, 0, 0, 0.9);
@@ -12,6 +13,7 @@ $cross_menu_size: 32px;
 $cross_menu_thickness: 2px;
 $menu_background: rgba(255, 255, 255, 1);
 
+$header_language_btn_shadow:rgba(1,1,1,.3);
 //------------!!! Architecture Page---------- //
 $arch_section_line: rgba(0, 0, 0, 0.3); //полоса
 //время и зум картинок
@@ -37,3 +39,7 @@ $arch_slider_size-mob: 375px;
 $arch_slider_arrow_color: rgba(0, 0, 0, 1);
 
 $arch_slider_arrow_thickness: 2px; //толщина стрелок
+
+
+// -------------- Texts Page -----------//
+$texts_item_shadow:rgba(0, 0, 0, .3);
