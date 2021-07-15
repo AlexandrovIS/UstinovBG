@@ -863,6 +863,12 @@ a:visited {
   padding: 24px 100px;
 }
 
+@media (max-width: 768px) {
+  .text-section {
+    padding: 24px 0;
+  }
+}
+
 .text-section__list li {
   margin-bottom: 50px;
   font-size: 20px;
@@ -871,6 +877,15 @@ a:visited {
   font-style: normal;
   -webkit-transition: text-shadow 300ms ease-out;
   transition: text-shadow 300ms ease-out;
+}
+
+@media (max-width: 768px) {
+  .text-section__list li {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 .text-section__list li:hover {

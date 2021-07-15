@@ -1,12 +1,19 @@
 .text-section{
  padding: 24px 100px;
- 
+
+ @include mobile{
+   padding: 24px 0;
+ }
 
  &__list{
    li{
      margin-bottom: 50px;
      @include font(20,24);
      transition: text-shadow 300ms ease-out;
+
+     @include mobile{
+       @include font(16,18);
+     }
      
    }
    li:hover{
