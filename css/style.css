@@ -921,6 +921,45 @@ a:visited {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
+.text-section article {
+  font-size: 16px;
+}
+
+.text-section article .article-title {
+  font-weight: 700;
+}
+
+.text-section article .paragraph {
+  text-indent: 16px;
+  text-align: justify;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.text-section article .mt {
+  margin-top: 16px;
+}
+
+.text-section article .mb {
+  margin-bottom: 16px;
+}
+
+.text-section article .list-with-dash li {
+  margin-left: 16px;
+}
+
+.text-section article .list-with-dash li::before {
+  content: '- ';
+}
+
+.text-section article .rs {
+  text-align: right;
+}
+
+.text-section article .cs {
+  text-align: center;
+}
+
 .biography-section {
   padding-top: 24px;
   display: -webkit-box;
