@@ -22,3 +22,40 @@
    }
  }
 }
+
+.text-section article{
+  font-size: 16px;
+
+  .article-title{
+    font-weight: 700;
+  }
+
+  .paragraph{
+    text-indent: 16px;
+    text-align: justify;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .mt{
+    margin-top: 16px;
+  }
+  .mb{
+    margin-bottom: 16px;
+  }
+
+  .list-with-dash li{
+    margin-left: 16px;
+  }
+
+  .list-with-dash li::before{
+    content: '- ';
+  }
+  .rs{
+    text-align: right;
+  }
+
+  .cs{
+    text-align: center;
+  }
+}

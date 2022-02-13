@@ -8,7 +8,13 @@ const clickHandler=()=>{
 
 btn_menu.addEventListener('click',clickHandler)
 
+//read more btn
 const btn_learn=document.querySelector('.arch__project-btn')
+const paragraph=document.querySelector('article p')
+if(!paragraph){
+  btn_learn.classList.add('arch__project-btn-disable')
+}
+
 if(btn_learn){
   btn_learn.addEventListener('click',()=>{
   document.querySelector('.arch__project-article').classList.toggle('arch__project-article-active')
