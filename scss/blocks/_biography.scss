@@ -2,7 +2,7 @@
  padding-top: 24px;
  display: flex;
  gap: 24px;
-
+ height: fit-content;
  @include mobile{
    flex-direction: column;
  }
@@ -16,17 +16,15 @@
  }
 
  .biography-article{
-  width: 100%;
+  flex-grow: 1;
+  // width: 100%;
   position: relative;
   text-align: justify;
+  
   @include font(16,18);
 
   &-title{
     @include font(16,18,bold);
-    margin-bottom: 10px;
-  }
-
-  &-paragraph{
     margin-bottom: 10px;
   }
  }
@@ -70,6 +68,7 @@
     transform: rotate(45deg);
   }
  }
+ 
  .biography-article-bnt-next{
    right: 0;
 
@@ -87,10 +86,49 @@
 
  .biography-article-slide{
   position: absolute;
+  padding: 0  20px;
   opacity: 0;
   transition: opacity 500ms ease-out;
  }
  .biography-article-slide-active{
-  opacity: 1;
+   opacity: 1;
  }
+}
+
+//text 
+.biography-article-slide{
+  font-size: 16px;
+  
+  .head-part{
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .paragraph{
+    margin-bottom: 16px;
+    text-indent: 16px;
+    
+    &-list li{
+      margin-bottom: 16px;
+      text-indent: 16px;
+    }
+    &-list li::before{
+      content: '-';
+      margin-right: 16px;
+     
+    }
+
+  }
+
+  .paragraph-list-numbers{
+    margin-bottom: 16px;
+    li{
+      text-indent: 16px;
+    }
+  }
+
+}
+
+.rl{
+  text-indent: 16px;
 }
