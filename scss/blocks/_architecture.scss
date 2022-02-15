@@ -81,37 +81,38 @@
   &-article {
     margin-top: 24px;
     max-width: 640px;
-    @include font(16, 16);
-    max-height: $visible_column;
+    max-height: 0;
     overflow: hidden;
     text-align: justify;
     transition: max-height $arch_height_time ease;
+    @include font(16, 16);
 
     @include mobile {
       max-width: 100%;
     }
 
-    &-active {
-      max-height: $arch_content_height;
-    }
   }
 
   &-btn {
     margin-top: 10px;
-    padding: 3px;
+    padding: 5px;
     background-color: $arch_btn_bg;
     color: $arch_btn_color;
-    transition: transform 700ms ease, opacity 350ms ease-in;
-    transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
-    &-disable {
-      transform: scaleY(0);
-      opacity: 0;
-    }
+   
+     display: none;
   }
 
-  &-btn:hover {
+  .active-btn {
+      display: block;
+      transform: scaleY(1);
+      transition: transform 700ms ease, opacity 350ms ease-in;
+      transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
+    }
+
+  .active-btn:hover {
     background-color: $arch_btn_color;
     color: $arch_btn_bg;
+   
   }
 }
 
@@ -243,6 +244,8 @@
 }
 
 .arch__photo-gallery-alt {
+ 
+ 
   @include font(16, 16);
   padding-top: 10px;
 }
