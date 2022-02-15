@@ -651,15 +651,15 @@ a:visited {
 .arch__project-article {
   margin-top: 24px;
   max-width: 640px;
+  max-height: 0;
+  overflow: hidden;
+  text-align: justify;
+  -webkit-transition: max-height 1500ms ease;
+  transition: max-height 1500ms ease;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   font-style: normal;
-  max-height: 84px;
-  overflow: hidden;
-  text-align: justify;
-  -webkit-transition: max-height 2500ms ease;
-  transition: max-height 2500ms ease;
 }
 
 @media (max-width: 768px) {
@@ -668,15 +668,18 @@ a:visited {
   }
 }
 
-.arch__project-article-active {
-  max-height: 5000px;
-}
-
 .arch__project-btn {
   margin-top: 10px;
-  padding: 3px;
+  padding: 5px;
   background-color: black;
   color: white;
+  display: none;
+}
+
+.arch__project .active-btn {
+  display: block;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
   -webkit-transition: opacity 350ms ease-in, -webkit-transform 700ms ease;
   transition: opacity 350ms ease-in, -webkit-transform 700ms ease;
   transition: transform 700ms ease, opacity 350ms ease-in;
@@ -685,13 +688,7 @@ a:visited {
   transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
 }
 
-.arch__project-btn-disable {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  opacity: 0;
-}
-
-.arch__project-btn:hover {
+.arch__project .active-btn:hover {
   background-color: white;
   color: black;
 }
@@ -956,7 +953,7 @@ a:visited {
   text-align: right;
 }
 
-.text-section article .cs {
+.text-section article .tac {
   text-align: center;
 }
 

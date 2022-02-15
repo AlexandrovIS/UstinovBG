@@ -8,20 +8,6 @@ const clickHandler=()=>{
 
 btn_menu.addEventListener('click',clickHandler)
 
-//read more btn
-const btn_learn=document.querySelector('.arch__project-btn')
-const paragraph=document.querySelector('article p')
-if(!paragraph){
-  btn_learn.classList.add('arch__project-btn-disable')
-}
-
-if(btn_learn){
-  btn_learn.addEventListener('click',()=>{
-  document.querySelector('.arch__project-article').classList.toggle('arch__project-article-active')
-  btn_learn.classList.toggle('arch__project-btn-disable')
-})
-}
-
 //Gallery
 const image_list=document.querySelectorAll('.photo-gallery-list img')
 const list_length=image_list.length
@@ -37,6 +23,7 @@ const  selectImg=(index=0)=> {
   image_list.forEach(item=>item.classList.remove('active_img'))
   image_list[index].classList.add('active_img')
   alt_field.innerHTML=image_list[index].alt
+   
 }
 
 const checkIndex=(index,func,length)=>{
