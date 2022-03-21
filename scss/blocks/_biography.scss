@@ -32,13 +32,14 @@
  .biography-article-bnt-prev,
  .biography-article-bnt-next{
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   width: 16px;
   height: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: opacity 300ms ease-out;
+  cursor: pointer;
 
   @include mobile{
     width: 10px;
@@ -54,12 +55,13 @@
 
  .biography-article-bnt-prev:hover,
  .biography-article-bnt-next:hover{
-   opacity: .7;
+   opacity: .4;
  }
 
  .biography-article-bnt-prev{
+  left: -20px;
   @include mobile{
-    display: none;
+    // display: none;
   }
    :nth-child(1){
     transform: rotate(-45deg);
@@ -70,7 +72,7 @@
  }
  
  .biography-article-bnt-next{
-   right: 0;
+   right:-20px;
 
    @include mobile{
      top:0;

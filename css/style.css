@@ -784,14 +784,15 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  top: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
   width: 24px;
-  height: 18px;
+  height: 100%;
   -webkit-transition: opacity 300ms ease-out;
   transition: opacity 300ms ease-out;
+  cursor: pointer;
 }
 
 .arch__photo-gallery .prev__img-btn span,
@@ -813,7 +814,7 @@ a:visited {
 
 .arch__photo-gallery .prev__img-btn:hover,
 .arch__photo-gallery .next__img-btn:hover {
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 .arch__photo-gallery .prev__img-btn {
@@ -835,6 +836,7 @@ a:visited {
 .arch__photo-gallery .prev__img-btn :last-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  margin-top: 14px;
 }
 
 .arch__photo-gallery .next__img-btn {
@@ -856,6 +858,7 @@ a:visited {
 .arch__photo-gallery .next__img-btn :last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  margin-top: 14px;
 }
 
 .arch__photo-gallery-alt {
@@ -1010,7 +1013,7 @@ a:visited {
 .biography-section .biography-article-bnt-prev,
 .biography-section .biography-article-bnt-next {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   width: 16px;
   height: 12px;
   display: -webkit-box;
@@ -1025,6 +1028,7 @@ a:visited {
           justify-content: space-between;
   -webkit-transition: opacity 300ms ease-out;
   transition: opacity 300ms ease-out;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -1045,13 +1049,11 @@ a:visited {
 
 .biography-section .biography-article-bnt-prev:hover,
 .biography-section .biography-article-bnt-next:hover {
-  opacity: .7;
+  opacity: .4;
 }
 
-@media (max-width: 768px) {
-  .biography-section .biography-article-bnt-prev {
-    display: none;
-  }
+.biography-section .biography-article-bnt-prev {
+  left: -20px;
 }
 
 .biography-section .biography-article-bnt-prev :nth-child(1) {
@@ -1065,7 +1067,7 @@ a:visited {
 }
 
 .biography-section .biography-article-bnt-next {
-  right: 0;
+  right: -20px;
 }
 
 @media (max-width: 768px) {
