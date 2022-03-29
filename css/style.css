@@ -45,6 +45,7 @@ input,
 button,
 textarea {
   font-family: inherit;
+  color: inherit;
 }
 
 textarea {
@@ -719,8 +720,7 @@ a:visited {
 
 @media (max-width: 768px) {
   .arch__photo-gallery .photo-gallery-list {
-    margin: 20px 0;
-    width: 100%;
+    width: 375px;
     height: 375px;
   }
 }
@@ -743,8 +743,8 @@ a:visited {
 
 .arch__photo-gallery .active_img {
   opacity: 1;
-  -webkit-transition: opacity 800ms ease;
-  transition: opacity 800ms ease;
+  -webkit-transition: opacity 800ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
 }
 
 .arch__photo-gallery .prev__img-range,

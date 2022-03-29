@@ -128,9 +128,7 @@
     overflow: hidden;
 
     @include mobile {
-      margin: 20px 0;
-      // width: $arch_slider_size-mob;
-      width: 100%;
+      width: $arch_slider_size-mob;
       height: $arch_slider_size-mob;
     }
 
@@ -146,17 +144,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    // transform: translateX(-100%);
     opacity: 0;
     //disappear
     // transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .active_img {
-    // transform: translateX(0%);
     opacity: 1;
     //appear
-    transition: opacity 800ms ease;
+    transition: opacity 800ms ease-in-out;
   }
 
   .prev__img-range,
