@@ -90,7 +90,6 @@
     @include mobile {
       max-width: 100%;
     }
-
   }
 
   &-btn {
@@ -98,21 +97,20 @@
     padding: 5px;
     background-color: $arch_btn_bg;
     color: $arch_btn_color;
-   
-     display: none;
+
+    display: none;
   }
 
   .active-btn {
-      display: block;
-      transform: scaleY(1);
-      transition: transform 700ms ease, opacity 350ms ease-in;
-      transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
-    }
+    display: block;
+    transform: scaleY(1);
+    transition: transform 700ms ease, opacity 350ms ease-in;
+    transition: background-color 300ms ease-in-out, color 500ms ease-in-out;
+  }
 
   .active-btn:hover {
     background-color: $arch_btn_color;
     color: $arch_btn_bg;
-   
   }
 }
 
@@ -130,7 +128,9 @@
     overflow: hidden;
 
     @include mobile {
-      width: $arch_slider_size-mob;
+      margin: 20px 0;
+      // width: $arch_slider_size-mob;
+      width: 100%;
       height: $arch_slider_size-mob;
     }
 
@@ -146,17 +146,17 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    transform: translateX(-100%);
+    // transform: translateX(-100%);
     opacity: 0;
     //disappear
-    transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    // transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .active_img {
-    transform: translateX(0%);
+    // transform: translateX(0%);
     opacity: 1;
     //appear
-    // transition: opacity 800ms ease;
+    transition: opacity 800ms ease;
   }
 
   .prev__img-range,
@@ -190,7 +190,6 @@
     transition: opacity 300ms ease-out;
     cursor: pointer;
 
-
     span {
       width: 100%;
       height: $arch_slider_arrow_thickness;
@@ -200,7 +199,7 @@
 
     @include mobile {
       width: 14px;
-      height: 12px;
+      height: 100%;
       position: static;
     }
   }
@@ -225,6 +224,10 @@
     :last-child {
       transform: rotate(45deg);
       margin-top: 14px;
+
+      @include mobile {
+        margin-top: 7px;
+      }
     }
   }
 
@@ -242,34 +245,35 @@
     }
     :last-child {
       transform: rotate(-45deg);
-      margin-top: 14px
+      margin-top: 14px;
+
+      @include mobile {
+        margin-top: 7px;
+      }
     }
   }
 }
 
 .arch__photo-gallery-alt {
- 
- 
   @include font(16, 16);
   padding-top: 10px;
 }
 
 //text decorations
-.arch__project-article{
-  
-  .paragraph{
+.arch__project-article {
+  .paragraph {
     text-indent: 16px;
     margin-top: 3px;
     margin-bottom: 3px;
   }
-  .arch-header{
+  .arch-header {
     font-size: 16px;
     margin-bottom: 16px;
   }
-  .mt{
+  .mt {
     margin-top: 16px;
   }
-  .mb{
+  .mb {
     margin-bottom: 16px;
   }
 }
