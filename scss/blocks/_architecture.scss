@@ -146,13 +146,13 @@
     bottom: 0;
     opacity: 0;
     //disappear
-    // transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    // transition: opacity 400ms ease;
   }
 
   .active_img {
     opacity: 1;
     //appear
-    transition: opacity 800ms ease-in-out;
+    transition: opacity 800ms ease;
   }
 
   .prev__img-range,

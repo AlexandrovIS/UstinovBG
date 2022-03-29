@@ -743,8 +743,8 @@ a:visited {
 
 .arch__photo-gallery .active_img {
   opacity: 1;
-  -webkit-transition: opacity 800ms ease-in-out;
-  transition: opacity 800ms ease-in-out;
+  -webkit-transition: opacity 800ms ease;
+  transition: opacity 800ms ease;
 }
 
 .arch__photo-gallery .prev__img-range,
@@ -1058,11 +1058,17 @@ a:visited {
 
 .biography-section .biography-article-bnt-prev:hover,
 .biography-section .biography-article-bnt-next:hover {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .biography-section .biography-article-bnt-prev {
   left: -20px;
+}
+
+@media (max-width: 768px) {
+  .biography-section .biography-article-bnt-prev {
+    top: 0;
+  }
 }
 
 .biography-section .biography-article-bnt-prev :nth-child(1) {
@@ -1097,7 +1103,7 @@ a:visited {
 
 .biography-section .biography-article-slide {
   position: absolute;
-  padding: 0  20px;
+  padding: 0 20px;
   opacity: 0;
   -webkit-transition: opacity 500ms ease-out;
   transition: opacity 500ms ease-out;
@@ -1127,7 +1133,7 @@ a:visited {
 }
 
 .biography-article-slide .paragraph-list li::before {
-  content: '-';
+  content: "-";
   margin-right: 16px;
 }
 

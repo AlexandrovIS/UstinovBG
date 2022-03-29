@@ -1,136 +1,135 @@
-.biography-section{
- padding-top: 24px;
- display: flex;
- gap: 24px;
- height: fit-content;
- @include mobile{
-   flex-direction: column;
- }
-
- .biography-img{
-   @include mobile{
-     width: 375px;
-     height: auto;
-     align-self: center;
-   }
- }
-
- .biography-article{
-  flex-grow: 1;
-  // width: 100%;
-  position: relative;
-  text-align: justify;
-  
-  @include font(16,18);
-
-  &-title{
-    @include font(16,18,bold);
-    margin-bottom: 10px;
-  }
- }
-
- .biography-article-bnt-prev,
- .biography-article-bnt-next{
-  position: absolute;
-  bottom: -20px;
-  width: 16px;
-  height: 12px;
+.biography-section {
+  padding-top: 24px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: opacity 300ms ease-out;
-  cursor: pointer;
-
-  @include mobile{
-    width: 10px;
-    height: 8px;
-    margin-bottom: -10px;
+  gap: 24px;
+  height: fit-content;
+  @include mobile {
+    flex-direction: column;
   }
-  span{
-   height: 2px;
-   background-color: black;
-   border-radius: 5px;
+
+  .biography-img {
+    @include mobile {
+      width: 375px;
+      height: auto;
+      align-self: center;
+    }
   }
- }
 
- .biography-article-bnt-prev:hover,
- .biography-article-bnt-next:hover{
-   opacity: .4;
- }
+  .biography-article {
+    flex-grow: 1;
+    // width: 100%;
+    position: relative;
+    text-align: justify;
 
- .biography-article-bnt-prev{
-  left: -20px;
-  @include mobile{
-    // display: none;
+    @include font(16, 18);
+
+    &-title {
+      @include font(16, 18, bold);
+      margin-bottom: 10px;
+    }
   }
-   :nth-child(1){
-    transform: rotate(-45deg);
-   }
-   :nth-child(2){
-    transform: rotate(45deg);
+
+  .biography-article-bnt-prev,
+  .biography-article-bnt-next {
+    position: absolute;
+    bottom: -20px;
+    width: 16px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: opacity 300ms ease-out;
+    cursor: pointer;
+
+    @include mobile {
+      width: 10px;
+      height: 8px;
+      margin-bottom: -10px;
+    }
+    span {
+      height: 2px;
+      background-color: black;
+      border-radius: 5px;
+    }
   }
- }
- 
- .biography-article-bnt-next{
-   right:-20px;
 
-   @include mobile{
-     top:0;
-   }
-
-   :nth-child(1){
-    transform: rotate(45deg);
+  .biography-article-bnt-prev:hover,
+  .biography-article-bnt-next:hover {
+    opacity: 0.4;
   }
-  :nth-child(2){
-    transform: rotate(-45deg);
- }
- }
 
- .biography-article-slide{
-  position: absolute;
-  padding: 0  20px;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
- }
- .biography-article-slide-active{
-   opacity: 1;
- }
+  .biography-article-bnt-prev {
+    left: -20px;
+
+    @include mobile {
+      top: 0;
+    }
+
+    :nth-child(1) {
+      transform: rotate(-45deg);
+    }
+    :nth-child(2) {
+      transform: rotate(45deg);
+    }
+  }
+
+  .biography-article-bnt-next {
+    right: -20px;
+
+    @include mobile {
+      top: 0;
+    }
+
+    :nth-child(1) {
+      transform: rotate(45deg);
+    }
+    :nth-child(2) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .biography-article-slide {
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+  }
+  .biography-article-slide-active {
+    opacity: 1;
+  }
 }
 
-//text 
-.biography-article-slide{
+//text
+.biography-article-slide {
   font-size: 16px;
-  
-  .head-part{
+
+  .head-part {
     text-align: center;
     margin-bottom: 16px;
   }
 
-  .paragraph{
+  .paragraph {
     margin-bottom: 16px;
     text-indent: 16px;
-    
-    &-list li{
+
+    &-list li {
       margin-bottom: 16px;
       text-indent: 16px;
     }
-    &-list li::before{
-      content: '-';
+    &-list li::before {
+      content: "-";
       margin-right: 16px;
-     
     }
-
   }
 
-  .paragraph-list-numbers{
+  .paragraph-list-numbers {
     margin-bottom: 16px;
-    li{
+    li {
       text-indent: 16px;
     }
   }
-
 }
 
-.rl{
+.rl {
   text-indent: 16px;
 }
